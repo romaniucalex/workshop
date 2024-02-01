@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
 }
 * a {
   text-decoration: none;
@@ -30,4 +31,91 @@ h4 {
 p {
   font-size: 16px;
   line-height: 26px;
+}
+
+body {
+  background-color: #f4f6f8;
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 70px;
+  max-width: 1110px;
+  width: 100%;
+  justify-content: center;
+}
+
+.card {
+  display: grid;
+  min-height: 230px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 35px 20px;
+  position: relative;
+}
+
+.card-country {
+  align-self: self-end;
+  color: #5964e0;
+}
+
+.card-time-wrapper {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.card-time-wrapper p {
+  color: #6e8089;
+}
+
+.card-job-description {
+  row-gap: 5px;
+}
+
+.card-company {
+  color: #6e8089;
+}
+
+.card-image {
+  position: absolute;
+  top: -25px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25%;
+}
+
+@media screen and (max-width: 540px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 540px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
